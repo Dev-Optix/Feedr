@@ -259,7 +259,7 @@ document.getElementById('tmdb').addEventListener('click', (evt) => {
 document.getElementById('feedR').addEventListener('click', (evt) => {
   document.getElementById('main').innerHTML = ''; //clear out id = "main"
   setNewsSource(reddit, '');
-  setNewsSource(newsAPI, '');
+  // setNewsSource(newsAPI, '');
   setNewsSource(nyTimes, '');
   setNewsSource(TMDb, '');
 });
@@ -268,7 +268,7 @@ document.getElementById('feedR').addEventListener('click', (evt) => {
 window.onload = function() {
   document.getElementById('main').innerHTML = ''; //clear out id = "main"
   setNewsSource(reddit, '');
-  setNewsSource(newsAPI, '');
+  // setNewsSource(newsAPI, '');
   setNewsSource(nyTimes, '');
   setNewsSource(TMDb, '');
 }
