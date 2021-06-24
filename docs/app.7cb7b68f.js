@@ -102,24 +102,24 @@ parcelRequire = (function (e, r, t, n) {
       })
       .catch((e) => console.log(e));
     }
-    // function n() {
-    //  fetch(
-    //   "https://newsapi.org/v2/top-headlines?country=us&apiKey=33e57662681e463aa7c9b00c00e6d8f1"
-    //  )
-    //   .then((e) => e.json())
-    //   .then((e) => {
-    //    console.log(e.articles),
-    //     e.articles.forEach(function (e) {
-    //      let t = document.createElement("article");
-    //      (t.innerHTML = `\n        <article class="article">\n          <section class="featuredImage">\n            <img src="${e.urlToImage}" alt="" />\n          </section>\n          <section class="articleContent">\n              <a href="${e.url}" target="_blank"><h3>${e.title}</h3></a>\n              <h6></br>NEWS API</br></br>Source - ${e.source.name}</br></br>Author - ${e.author}</h6>\n              <button class="modal-btn" \n                data-title="${e.title}" \n                data-img="${e.urlToImage}"\n                data-content="${e.description}" \n                data-link="${e.url}" \n                type="button">\n                  More\n              </button>\n          </section>\n          <section class="impressions">\n            Published:</br>${e.publishedAt}\n          </section>\n          <div class="clearfix"></div>\n        </article>\n      `),
-    //       document.getElementById("main").appendChild(t),
-    //       document.addEventListener("click", function (e) {
-    //        c(e);
-    //       });
-    //     });
-    //   })
-    //   .catch((e) => console.log(e));
-    // }
+    function n() {
+     fetch(
+      "https://newsapi.org/v2/top-headlines?country=us&apiKey=33e57662681e463aa7c9b00c00e6d8f1"
+     )
+      .then((e) => e.json())
+      .then((e) => {
+       console.log(e.articles),
+        e.articles.forEach(function (e) {
+         let t = document.createElement("article");
+         (t.innerHTML = `\n        <article class="article">\n          <section class="featuredImage">\n            <img src="${e.urlToImage}" alt="" />\n          </section>\n          <section class="articleContent">\n              <a href="${e.url}" target="_blank"><h3>${e.title}</h3></a>\n              <h6></br>NEWS API</br></br>Source - ${e.source.name}</br></br>Author - ${e.author}</h6>\n              <button class="modal-btn" \n                data-title="${e.title}" \n                data-img="${e.urlToImage}"\n                data-content="${e.description}" \n                data-link="${e.url}" \n                type="button">\n                  More\n              </button>\n          </section>\n          <section class="impressions">\n            Published:</br>${e.publishedAt}\n          </section>\n          <div class="clearfix"></div>\n        </article>\n      `),
+          document.getElementById("main").appendChild(t),
+          document.addEventListener("click", function (e) {
+           c(e);
+          });
+        });
+      })
+      .catch((e) => console.log(e));
+    }
     function a() {
      fetch(
       "https://api.nytimes.com/svc/topstories/v2/science.json?api-key=CAjG768Tj9tZz6cGQgMsnhuJivIYGaar"
